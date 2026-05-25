@@ -1,0 +1,72 @@
+﻿<Window x:Class="ReadAndWrite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Читай, Пиши и не спиши" 
+        Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#1e3a5f">
+            <StackPanel VerticalAlignment="Top" Margin="0,20,0,0">
+
+                <TextBlock Text="📚" FontSize="24" HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <Button x:Name="NavCatalog" ToolTip="Каталог книг"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#2c5282" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="🏠" Click="NavCatalog_Click"/>
+
+                <Button x:Name="NavMyLists" ToolTip="Мои списки"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#2c5282" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="📑" Click="NavMyLists_Click"/>
+
+                <Button x:Name="NavAdminPanel" ToolTip="Администрирование"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#2c5282" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="🛡️" Click="NavAdminPanel_Click"
+                        Visibility="Collapsed"/>
+
+                <Button x:Name="NavAuthorRoom" ToolTip="Кабинет автора"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#2c5282" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="🖊️" Click="NavAuthorRoom_Click"
+                        Visibility="Collapsed"/>
+
+                <Button x:Name="NavFreezeWarning" ToolTip="Аккаунт заморожен"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#c53030" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="⚠️" Click="NavFreezeWarning_Click"
+                        Visibility="Collapsed"/>
+
+                <Button x:Name="NavMyProfile" ToolTip="Мой профиль"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#2c5282" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="👤" Click="NavMyProfile_Click"/>
+
+                <Border Height="1" Background="#4a6fa5" Margin="10,20,10,10"/>
+
+                <Button ToolTip="Выйти из системы"
+                        Width="45" Height="45" Margin="0,4"
+                        Background="#c53030" Foreground="White"
+                        BorderThickness="0" FontSize="18" Cursor="Hand"
+                        Content="🚪" Click="NavExit_Click"/>
+            </StackPanel>
+        </Border>
+
+        <Frame x:Name="ContentFrame" Grid.Column="1" 
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
