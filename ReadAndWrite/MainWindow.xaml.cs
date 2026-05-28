@@ -101,6 +101,12 @@ namespace ReadAndWrite
                            "Ограничение доступа", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            var help = new HelpWindow();
+            help.Show();
+        }
+
         private void NavExit_Click(object sender, RoutedEventArgs e)
         {
             var loginWindow = new LoginWindow();

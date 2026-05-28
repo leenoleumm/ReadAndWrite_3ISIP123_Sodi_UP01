@@ -104,6 +104,12 @@ namespace ReadAndWrite
             TbEmail.Text = "";
         }
 
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            var help = new HelpWindow();
+            help.Show();
+        }
+
         private void RegisterUser()
         {
             var login = TbLogin.Text.Trim();
@@ -171,6 +177,7 @@ namespace ReadAndWrite
             }
         }
     }
+
 
     public static class CurrentUser
     {
